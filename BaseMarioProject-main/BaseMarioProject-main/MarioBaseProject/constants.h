@@ -5,3 +5,4 @@
 
 bool InitSDL();
 void CloseSDL();
+bool Update();

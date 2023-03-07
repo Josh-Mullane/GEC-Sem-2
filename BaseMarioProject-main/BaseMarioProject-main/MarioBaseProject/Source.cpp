@@ -12,7 +12,12 @@ int main(int argc, char* args[])
 {
 	if (InitSDL())
 	{
-		SDL_Delay(5000);
+		bool quit = false;
+
+		while (!quit)
+		{
+			quit = Update();
+		}
 	}
 
 	CloseSDL();
@@ -53,4 +58,21 @@ void CloseSDL()
 
 	IMG_Quit();
 	SDL_Quit();
+}
+
+bool Update()
+{
+	//Event handler
+	SDL_Event e;
+
+	SDL_PollEvent(&e);
+
+	switch (e.type)
+	{
+		//click X to quit
+	case SDL_QUIT:
+		return true;
+		break;
+	}
+	return false;
 }
