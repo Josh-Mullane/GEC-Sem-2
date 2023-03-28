@@ -52,7 +52,6 @@ bool InitSDL()
 			return false;
 
 		}
-		return true;
 	}
 	g_renderer = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED);
 	if (g_renderer != nullptr)
@@ -74,6 +73,7 @@ bool InitSDL()
 	g_texture = LoadTextureFromFile("Images/test.bmp");
 	if (g_texture == nullptr)
 	{
+		cout << "Texture Failed to load. Error: " << IMG_GetError();
 		return false;
 	}
 }
@@ -134,8 +134,8 @@ void CloseSDL()
 	SDL_DestroyWindow(g_window);
 	g_window = nullptr;
 
-	IMG_Quit();
 	SDL_Quit();
+	IMG_Quit();
 
 	FreeTexture();
 	SDL_DestroyRenderer(g_renderer);

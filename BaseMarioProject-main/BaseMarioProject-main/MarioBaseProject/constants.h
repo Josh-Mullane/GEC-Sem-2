@@ -3,6 +3,7 @@
 #define SCREEN_WIDTH 512
 #define SCREEN_HEIGHT 416
 #include <string>
+using namespace std;
 
 bool InitSDL();
 void CloseSDL();
