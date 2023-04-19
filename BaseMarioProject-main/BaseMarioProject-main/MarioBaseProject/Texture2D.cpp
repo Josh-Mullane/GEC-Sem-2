@@ -4,8 +4,8 @@
 
 using namespace std;
 
-Texture2d::Texture2D(SDL_Renderer* renderer);
+Texture2D::Texture2D(SDL_Renderer* renderer);
 
 bool LoadFromFile(std::string path);
 void Free();
-void Render(Vector2D new_position, SDL_RendererFlip flip, double angle 0.0);
+void Render(Vector2D new_position, SDL_RendererFlip flip, double angle = 0.0);
