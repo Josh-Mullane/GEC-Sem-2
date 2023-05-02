@@ -3,10 +3,13 @@
 #include <SDL_mixer.h>
 #include "constants.h"
 #include <iostream>
+#include "Texture2D.h"
+#include "commons.h"
 
 using namespace std;
 
 SDL_Window* g_window = nullptr;
+Texture2D* g_texture = nullptr;
 
 int main(int argc, char* args[])
 {
