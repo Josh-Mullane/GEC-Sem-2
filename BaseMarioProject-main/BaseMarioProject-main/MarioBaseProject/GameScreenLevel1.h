@@ -1,15 +1,25 @@
 #pragma once
 #include "GameScreen.h"
-class GameScreenLevel1
+#include <iostream>
+#include "commons.h"
+#include "Texture2D.h"
+class GameScreenLevel1 : GameScreen
 {
 public:
 
 	GameScreenLevel1(SDL_Renderer* renderer);
 	~GameScreenLevel1();
 
-	void Render() override;
-	void Update(float deltaTime, SDL_Event e) override;
+	void Render();
+	void Update(float deltaTime, SDL_Event e);
 
+	
+
+	Texture2D* m_background_texture;
+
+
+
+	
 private:
 
 	bool SetUpLevel();

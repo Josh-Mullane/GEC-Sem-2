@@ -12,11 +12,11 @@ public:
 	virtual void Render();
 	virtual void Update(float deltaTime, SDL_Event e);
 
-	
+	SDL_Renderer* m_renderer;
 
 private:
 
-	SDL_Renderer* m_renderer;
+	
 
 	Texture2D* m_background_texture;
 
