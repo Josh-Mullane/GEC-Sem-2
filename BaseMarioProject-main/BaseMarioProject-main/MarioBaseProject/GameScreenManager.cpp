@@ -34,7 +34,7 @@ void GameScreenManager::Update(float deltaTime, SDL_Event e)
 
 GameScreenManager::GameScreenManager(SDL_Renderer* renderer, SCREENS startScreen)
 {
-	SDL_Renderer* m_renderer;
+	SDL_Renderer* m_renderer = nullptr;
 	ChangeScreen(startScreen);
 
 }

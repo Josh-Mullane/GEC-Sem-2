@@ -14,24 +14,26 @@ bool GameScreenLevel1::SetUpLevel()
 	}
 }
 
-GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
-{
-	SetUpLevel();
-	
-}
-
-
-
 void GameScreenLevel1::Render()
 {
 	m_background_texture->Render(Vector2D(), SDL_FLIP_NONE);
 }
+
+GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
+{
+	SetUpLevel();
+}
+
+
+
+
 
 void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 {
 
 
 }
+
 GameScreenLevel1::~GameScreenLevel1()
 {
 	delete m_background_texture;
