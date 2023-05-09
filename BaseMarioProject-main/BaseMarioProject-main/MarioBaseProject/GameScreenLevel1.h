@@ -3,6 +3,9 @@
 #include <iostream>
 #include "commons.h"
 #include "Texture2D.h"
+
+class Texture2D;
+
 class GameScreenLevel1 : GameScreen
 {
 public:
