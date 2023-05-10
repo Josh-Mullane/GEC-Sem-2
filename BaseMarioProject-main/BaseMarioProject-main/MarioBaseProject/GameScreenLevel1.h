@@ -3,7 +3,7 @@
 #include <iostream>
 #include "commons.h"
 #include "Texture2D.h"
-
+#include "Character.h"
 class Texture2D;
 
 class GameScreenLevel1 : GameScreen
@@ -19,5 +19,7 @@ public:
 private:
 	Texture2D* m_background_texture;
 	bool SetUpLevel();
+
+	Character* my_character;
 };
 
