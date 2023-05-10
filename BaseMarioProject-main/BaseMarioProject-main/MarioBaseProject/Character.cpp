@@ -20,7 +20,7 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 
 void Character::AddGravity(float deltaTime)
 {
-	if ((m_position.y + 64) >= SCREEN_HEIGHT)
+	if ((m_position.y + 64) <= SCREEN_HEIGHT)
 	{
 		m_position.y += GRAVITY;
 	}
@@ -44,10 +44,13 @@ void Character::MoveRight(float deltaTime)
 
 void Character::Jump()
 {
-
-	m_jump_force = INITIAL_JUMP_FORCE;
-	m_jumping = true;
-	m_can_jump = false;
+	if (!m_jumping)
+	{
+		m_jump_force = INITIAL_JUMP_FORCE;
+		m_jumping = true;
+		m_can_jump = false;
+	}
+	
 }
 
 void Character::Render()
@@ -86,7 +89,7 @@ void Character::Update(float deltaTime, SDL_Event e)
 			m_moving_right = true;
 			break;
 		}
-		case SDLK_SPACE:
+		case SDLK_UP:
 		{
 			Jump();
 			break;
@@ -129,9 +132,9 @@ void Character::Update(float deltaTime, SDL_Event e)
 
 		if (m_jump_force <= 0.0f)
 			m_jumping = false;
-		AddGravity(deltaTime);
+		
 	}
-
+	AddGravity(deltaTime);
 }
 
 
