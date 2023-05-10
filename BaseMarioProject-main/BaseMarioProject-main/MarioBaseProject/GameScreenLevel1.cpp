@@ -1,7 +1,6 @@
 #include "GameScreenLevel1.h"
-#include "Texture2D.h"
-#include <iostream>
-#include "commons.h"
+
+
 
 bool GameScreenLevel1::SetUpLevel()
 {
