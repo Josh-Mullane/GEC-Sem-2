@@ -20,6 +20,8 @@ public:
 	void setPosition(Vector2D new_position);
 	Vector2D GetPosition();
 
+	
+
 private:
 
 protected:

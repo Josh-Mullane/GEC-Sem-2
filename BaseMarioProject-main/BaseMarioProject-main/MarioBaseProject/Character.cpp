@@ -24,6 +24,9 @@ void Character::Render()
 
 void Character::Update(float deltaTime, SDL_Event e)
 {
+	
+
+
 	if (SDLK_LEFT)
 	{
 		m_position.x -= 1;
