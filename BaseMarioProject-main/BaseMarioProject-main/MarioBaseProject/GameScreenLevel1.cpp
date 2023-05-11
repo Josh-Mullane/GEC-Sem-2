@@ -30,7 +30,7 @@ void GameScreenLevel1::SetlevelMap()
 bool GameScreenLevel1::SetUpLevel()
 {
 	m_background_texture = new Texture2D(m_renderer);
-	if (!m_background_texture->LoadFromFile("Images/test.bmp"))
+	if (!m_background_texture->LoadFromFile("Images/BackgroundMB.png"))
 	{
 		std::cout << "Failed to load background texture!" << std::endl;
 		return false;
