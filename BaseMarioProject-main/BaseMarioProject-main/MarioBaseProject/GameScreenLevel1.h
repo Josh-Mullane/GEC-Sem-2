@@ -4,6 +4,7 @@
 #include "commons.h"
 #include "Texture2D.h"
 #include "Character.h"
+#include "LevelMap.h"
 class Texture2D;
 
 
@@ -23,5 +24,8 @@ private:
 	bool SetUpLevel();
 
 	Character* my_character;
+
+	void SetlevelMap();
+	LevelMap* m_level_map;
 };
 
